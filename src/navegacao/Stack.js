@@ -20,7 +20,8 @@ export default props => (
         </stack.Screen>
         <stack.Screen name='TelaB'>
             {props => (
-                <PassoSteck {...props} voltar avancar='TelaC'>
+                <PassoSteck {...props} voltar avancar='TelaC'
+                    avancarParams={{ numero: 1007 }}>
                     <TelaB />
                 </PassoSteck>
             )}
@@ -29,7 +30,7 @@ export default props => (
         <stack.Screen name='TelaC'>
             {props => (
                 <PassoSteck {...props} voltar avancar='TelaC'>
-                    <TelaC />
+                    <TelaC {...props} />
                 </PassoSteck>
             )}
         </stack.Screen>
